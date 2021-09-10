@@ -2,34 +2,58 @@
 
 var generateBtn = document.querySelector("#generate");
 
-var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperChar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "}", "~"] 
 
 
 
+var pwLength = prompt("How many characters would you like your password to be? Choose a number between 8 and 128.");
 
-var pwLength = prompt("How many characters would you like your password to be? Choose a number between 8 and 129.");
-                       
-if (8 > pwLength || pwLength > 129) {
- alert("Password length must be between 8 and 129 characters")
+
+
+if (8 > pwLength || pwLength > 128) {
+ alert("Password length must be between 8 and 128 characters");
+ //pwLength;
+ //else {
+// lowCaseChoice;
+// }
 }  
 
-
-
-var lowCharChoice = confirm("Do you want to include lowercase letters in your password?")
-//if()
-var upCharChoice = confirm("Do you want to include uppercase letters in your password?")
+var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
+//if
+var upCaseChoice = confirm("Do you want to include uppercase letters in your password?")
 //if()    
 var numCharChoice = confirm("Do you want to include numbers in your password?")
 //if
-var specCharChoice = confirm("Do you want to include special chacters in your password?")
+var specCharChoice = confirm("Do you want to include special characters in your password?")
 //if
+
+var lowCaseRandom = Math.floor(Math.random() * lowerCase.length);
+var upCaseRandom = Math.floor(Math.random() * upperCase.length);
+var numRandom = Math.floor(Math.random() * numChar.length);
+var specCharRandom = Math.floor(Math.random() * specialChar.length);
+
+//for (var = 0; i < pwLength; i++){
+  //if (lowCaseChoice){
+  //  createPassword.push(lowerCase[lowCaseRandom]);
+  //}
+ // if (upCaseChoice){
+ //   createPassword.push(upperCase[upCaseRandom]);
+//  }
+ // if (numCaseChoice){
+ //   createPassword.push(NumChar[numRandom]);
+ // }
+ // if (specCharChoice){
+ //   createPassword.push(specialChar[specCharRandom]);
+//  }
+//}
 
 
 
 // Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -59,11 +83,11 @@ function writePassword() {
   //var passwordLength = prompt('How long would you like your password to be? Please enter a number between 8 - 128')
 
   //if(20 > parseInt(passwordLength)) {
-    //alert('Yo dude, read the instructions ')
-    //generatePassword()
+   // alert('Yo dude, read the instructions ')
+   // generatePassword()
   //} else {
-    //console.log('greater than twenty')
- // }
+  //  console.log('greater than twenty')
+  //}
 
   //console.log(typeof passwordLength)
 
