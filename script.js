@@ -9,17 +9,18 @@ var specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "
 
 
 
+
 var pwLength = prompt("How many characters would you like your password to be? Choose a number between 8 and 129.");
                        
-if (8 < pwLength || pwLength > 129) {
-   alert("Password length must be between 8 and 129 characters")
-   return;
-}
+if (8 > pwLength || pwLength > 129) {
+ alert("Password length must be between 8 and 129 characters")
+}  
 
 
-var lowCharChoice = confirm("Do you want to include lowercase chacters in your password?")
+
+var lowCharChoice = confirm("Do you want to include lowercase letters in your password?")
 //if()
-var upCharChoice = confirm("Do you want to include uppercase chacters in your password?")
+var upCharChoice = confirm("Do you want to include uppercase letters in your password?")
 //if()    
 var numCharChoice = confirm("Do you want to include numbers in your password?")
 //if
