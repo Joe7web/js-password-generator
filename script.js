@@ -14,13 +14,13 @@ var pwLength = prompt("How many characters would you like your password to be? C
 n = parseInt(pwLength)
 
 
-if (8 > pwLength || pwLength > 128) {
+if (pwLength < 8 || pwLength > 128) {
  alert("Password length must be between 8 and 128 characters");
  return;
 }
+
 var createPassword = []
 
-for (var = 0; i < pwLength; i++)
 
 var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
 if (lowCaseChoice === true){
@@ -46,6 +46,11 @@ var upCaseRandom = Math.floor(Math.random() * upperCase.length);
 var numRandom = Math.floor(Math.random() * numChar.length);
 var specCharRandom = Math.floor(Math.random() * specialChar.length);
 
+
+for (var = 0; i < pwLength; i++)
+
+var newPassword = ''
+
 //}
 
 
@@ -69,7 +74,7 @@ generateBtn.addEventListener("click", writePassword);
 
 //function generatePassword() {
   
- var newPassword = ''
+
   
   
   
