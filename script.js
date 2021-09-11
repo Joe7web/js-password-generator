@@ -11,18 +11,19 @@ var specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "
 
 var pwLength = prompt("How many characters would you like your password to be? Choose a number between 8 and 128.");
 
+n = parseInt(pwLength)
 
 
 if (8 > pwLength || pwLength > 128) {
  alert("Password length must be between 8 and 128 characters");
- //pwLength;
- //else {
-// lowCaseChoice;
-// }
-}  
+ 
+}
+
 
 var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
-//if
+//if (lowCaseChoice === true){
+  //createPassword.push(lowerCase[lowCaseRandom]);
+//}
 var upCaseChoice = confirm("Do you want to include uppercase letters in your password?")
 //if()    
 var numCharChoice = confirm("Do you want to include numbers in your password?")
@@ -36,8 +37,7 @@ var numRandom = Math.floor(Math.random() * numChar.length);
 var specCharRandom = Math.floor(Math.random() * specialChar.length);
 
 //for (var = 0; i < pwLength; i++){
-  //if (lowCaseChoice){
-  //  createPassword.push(lowerCase[lowCaseRandom]);
+  //
   //}
  // if (upCaseChoice){
  //   createPassword.push(upperCase[upCaseRandom]);
@@ -50,7 +50,7 @@ var specCharRandom = Math.floor(Math.random() * specialChar.length);
 //  }
 //}
 
-
+var createPassword = []
 
 // Write password to the #password input
 
@@ -82,7 +82,7 @@ function writePassword() {
 //pw length prompt
   //var passwordLength = prompt('How long would you like your password to be? Please enter a number between 8 - 128')
 
-  //if(20 > parseInt(passwordLength)) {
+  if(20 > parseInt(passwordLength)) {
    // alert('Yo dude, read the instructions ')
    // generatePassword()
   //} else {
