@@ -6,50 +6,61 @@ var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "}", "~"] 
-
-//function generate password (){
-
-var pwLength = prompt("How many characters would you like your password to be? Choose a number between 8 and 128.");
-
-n = parseInt(pwLength)
-
-
-if (pwLength < 8 || pwLength > 128) {
- alert("Password length must be between 8 and 128 characters");
- return;
-}
-
 var createPassword = []
+var allChars = []
+
+function getParams (){
+  var pwLength = prompt("How many characters would you like your password to be? Choose a number between 8 and 128.");
+
+  pwLength = parseInt(pwLength)
+  console.log("pw",pwLength)
+  
+  if (pwLength < 8 || pwLength > 128) {
+   alert("Password length must be between 8 and 128 characters");
+   getParams();
+  }
+  
+
+  
+  var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
+  console.log(lowCaseChoice);
+
+  if (lowCaseChoice === true){
+   // createPassword.push(lowerCase[lowCaseRandom]);
+   allChars.push(lowerCase)
+
+  }
+  console.log(allChars);
+  
+  var upCaseChoice = confirm("Do you want to include uppercase letters in your password?")
+  if (upCaseChoice === true){
+    allChars.push(upperCase)
+  //   createPassword.push(upperCase[upCaseRandom]);
+  }   
+  
+  var numCharChoice = confirm("Do you want to include numbers in your password?")
+  if (numCharChoice ===true){
+   // createPassword.push(NumChar[numRandom]);
+  }
+  var specCharChoice = confirm("Do you want to include special characters in your password?")
+  if (specCharChoice === true){
+   // createPassword.push(specialChar[specCharRandom]);
+  }
+  for (var = 0; i < pwLength; i++)
+  
+} 
+//console.log(lowCaseChoice,"line 50")
 
 
-var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
-if (lowCaseChoice === true){
-  createPassword.push(lowerCase[lowCaseRandom]);
-}
-
-var upCaseChoice = confirm("Do you want to include uppercase letters in your password?")
-if (upCaseChoice === true){
-   createPassword.push(upperCase[upCaseRandom]);
-}   
-
-var numCharChoice = confirm("Do you want to include numbers in your password?")
-if (numCaseChoice ===true){
-  createPassword.push(NumChar[numRandom]);
-}
-var specCharChoice = confirm("Do you want to include special characters in your password?")
-if (specCharChoice === true){
-  createPassword.push(specialChar[specCharRandom]);
-}
-
-var lowCaseRandom = Math.floor(Math.random() * lowerCase.length);
-var upCaseRandom = Math.floor(Math.random() * upperCase.length);
-var numRandom = Math.floor(Math.random() * numChar.length);
-var specCharRandom = Math.floor(Math.random() * specialChar.length);
+//var lowCaseRandom = Math.floor(Math.random() * lowerCase.length);
+//var upCaseRandom = Math.floor(Math.random() * upperCase.length);
+// var numRandom = Math.floor(Math.random() * numChar.length);
+// var specCharRandom = Math.floor(Math.random() * specialChar.length);
 
 
-for (var = 0; i < pwLength; i++)
+//for (var = 0; i < pwLength; i++)
 
-var newPassword = ''
+//var newPassword = ''
 
 //}
 
@@ -59,7 +70,7 @@ var newPassword = ''
 // Write password to the #password input
 
 function writePassword() {
-  var password = generatePassword();
+  var password = getParams();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
