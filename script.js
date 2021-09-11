@@ -7,7 +7,7 @@ var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P"
 var numChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "}", "~"] 
 
-
+//function generate password (){
 
 var pwLength = prompt("How many characters would you like your password to be? Choose a number between 8 and 128.");
 
@@ -16,41 +16,40 @@ n = parseInt(pwLength)
 
 if (8 > pwLength || pwLength > 128) {
  alert("Password length must be between 8 and 128 characters");
- 
+ return;
 }
+var createPassword = []
 
+for (var = 0; i < pwLength; i++)
 
 var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
-//if (lowCaseChoice === true){
-  //createPassword.push(lowerCase[lowCaseRandom]);
-//}
+if (lowCaseChoice === true){
+  createPassword.push(lowerCase[lowCaseRandom]);
+}
+
 var upCaseChoice = confirm("Do you want to include uppercase letters in your password?")
-//if()    
+if (upCaseChoice === true){
+   createPassword.push(upperCase[upCaseRandom]);
+}   
+
 var numCharChoice = confirm("Do you want to include numbers in your password?")
-//if
+if (numCaseChoice ===true){
+  createPassword.push(NumChar[numRandom]);
+}
 var specCharChoice = confirm("Do you want to include special characters in your password?")
-//if
+if (specCharChoice === true){
+  createPassword.push(specialChar[specCharRandom]);
+}
 
 var lowCaseRandom = Math.floor(Math.random() * lowerCase.length);
 var upCaseRandom = Math.floor(Math.random() * upperCase.length);
 var numRandom = Math.floor(Math.random() * numChar.length);
 var specCharRandom = Math.floor(Math.random() * specialChar.length);
 
-//for (var = 0; i < pwLength; i++){
-  //
-  //}
- // if (upCaseChoice){
- //   createPassword.push(upperCase[upCaseRandom]);
-//  }
- // if (numCaseChoice){
- //   createPassword.push(NumChar[numRandom]);
- // }
- // if (specCharChoice){
- //   createPassword.push(specialChar[specCharRandom]);
-//  }
 //}
 
-var createPassword = []
+
+
 
 // Write password to the #password input
 
@@ -62,15 +61,15 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
+///Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 
 
 //function generatePassword() {
   
- // var newPassword = ''
+ var newPassword = ''
   
   
   
@@ -81,23 +80,6 @@ function writePassword() {
   
 //pw length prompt
   //var passwordLength = prompt('How long would you like your password to be? Please enter a number between 8 - 128')
-
-  if(20 > parseInt(passwordLength)) {
-   // alert('Yo dude, read the instructions ')
-   // generatePassword()
-  //} else {
-  //  console.log('greater than twenty')
-  //}
-
-  //console.log(typeof passwordLength)
-
-
-
-
-
-
-
-
 
 //WHEN prompted for password criteria
 //THEN I select which criteria to include in th//\\e password
