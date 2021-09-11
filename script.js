@@ -21,33 +21,33 @@ function getParams (){
   }
   
   var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
-  console.log(lowCaseChoice);
+ // console.log(lowCaseChoice);
 
   if (lowCaseChoice === true){
    // createPassword.push(lowerCase[lowCaseRandom]);
-   allChars.push(lowerCase)
+   //allChars.push(lowerCase)
 
   }
   //console.log(allChars);
   
   var upCaseChoice = confirm("Do you want to include uppercase letters in your password?")
   if (upCaseChoice === true){
-    allChars.push(upperCase)
+    //allChars.push(upperCase)
    // createPassword.push(upperCase[upCaseRandom]);
   }   
   
   var numCharChoice = confirm("Do you want to include numbers in your password?")
   if (numCharChoice ===true){
-    allChars.push.(numChar);
+    //allChars.push.(numChar);
     //createPassword.push(NumChar[numRandom]);
   }
   var specCharChoice = confirm("Do you want to include special characters in your password?")
   if (specCharChoice === true){
-    allChars.push(specialChar);
+    //allChars.push(specialChar);
    //createPassword.push(specialChar[specCharRandom]);
   }
-  for (var = 0; i < pwLength; i++)
-  allChars.push(createPassword)
+  //for (var = 0; i < pwLength; i++)
+  //allChars.push(createPassword)
 
 
 } 
