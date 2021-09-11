@@ -1,20 +1,14 @@
 # js-password-generator
 ## Password Generator
 
-I created a professional website to showcase my skills and abilities for future employers and clients.
+This is a password generator that will create a random password based on the length of characters 
+chosen by the user and the user's ability to choose from 4 different groups of characters.
 
-It will be continually updated and improved as my future projects are added to demonstrate my full stack capabilities.
-
-By leveraging GitHub, the accessibility to these projects and repositories are convenient and easy to update.
-
-
-
+Unfortuately, this current application has bugs and incomplete code that was not able to be overcome
+by the deadline.
+It will be resubmitted in the future once able to be completed.
 
 
 
-I was able to contruct this landing page by using html and advanced css.
+I was fortunate to have some assistance from Frank Craven and Neil the learning Assistant.
 
-
-
-
-I was fortunate to have some assistance from Frank Craven

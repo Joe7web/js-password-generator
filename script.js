@@ -13,14 +13,12 @@ function getParams (){
   var pwLength = prompt("How many characters would you like your password to be? Choose a number between 8 and 128.");
 
   pwLength = parseInt(pwLength)
-  console.log("pw",pwLength)
+  //console.log("pw",pwLength)
   
   if (pwLength < 8 || pwLength > 128) {
    alert("Password length must be between 8 and 128 characters");
    getParams();
   }
-  
-
   
   var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
   console.log(lowCaseChoice);
@@ -30,27 +28,30 @@ function getParams (){
    allChars.push(lowerCase)
 
   }
-  console.log(allChars);
+  //console.log(allChars);
   
   var upCaseChoice = confirm("Do you want to include uppercase letters in your password?")
   if (upCaseChoice === true){
     allChars.push(upperCase)
-  //   createPassword.push(upperCase[upCaseRandom]);
+   // createPassword.push(upperCase[upCaseRandom]);
   }   
   
   var numCharChoice = confirm("Do you want to include numbers in your password?")
   if (numCharChoice ===true){
-   // createPassword.push(NumChar[numRandom]);
+    allChars.push.(numChar);
+    //createPassword.push(NumChar[numRandom]);
   }
   var specCharChoice = confirm("Do you want to include special characters in your password?")
   if (specCharChoice === true){
-   // createPassword.push(specialChar[specCharRandom]);
+    allChars.push(specialChar);
+   //createPassword.push(specialChar[specCharRandom]);
   }
   for (var = 0; i < pwLength; i++)
-  
+  allChars.push(createPassword)
+
+
 } 
 //console.log(lowCaseChoice,"line 50")
-
 
 //var lowCaseRandom = Math.floor(Math.random() * lowerCase.length);
 //var upCaseRandom = Math.floor(Math.random() * upperCase.length);
@@ -86,8 +87,7 @@ generateBtn.addEventListener("click", writePassword);
 //function generatePassword() {
   
 
-  
-  
+
   
   //WHEN I click the button to generate a password
   //THEN I am presented with a series of prompts for password criteria
@@ -100,7 +100,6 @@ generateBtn.addEventListener("click", writePassword);
 //WHEN prompted for password criteria
 //THEN I select which criteria to include in th//\\e password
 
-//alert " Please choose from the following criteria to create your new password"  if click ok - move to next prmpt
 
 //WHEN prompted for the length of the password
 //THEN I choose a length of at least 8 characters and no more than 128 characters
