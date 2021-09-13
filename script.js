@@ -6,7 +6,7 @@ var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "}", "~"] 
-var createPassword = []
+var password = ""
 var allChars = []
 
 function getParams (){
@@ -23,7 +23,12 @@ function getParams (){
   var lowCaseChoice = confirm("Do you want to include lowercase letters in your password?")
  // console.log(lowCaseChoice);
 
+
   if (lowCaseChoice === true){
+    for (var i = 0; i < lowerCase.length; i++){
+    allChars.push(lowerCase[i]);
+    }
+
    // createPassword.push(lowerCase[lowCaseRandom]);
    //allChars.push(lowerCase)
 
@@ -32,23 +37,40 @@ function getParams (){
   
   var upCaseChoice = confirm("Do you want to include uppercase letters in your password?")
   if (upCaseChoice === true){
+    for (var i = 0; i < upperCase.length; i++){
+      allChars.push(upperCase[i]);
+      }
     //allChars.push(upperCase)
    // createPassword.push(upperCase[upCaseRandom]);
   }   
   
   var numCharChoice = confirm("Do you want to include numbers in your password?")
   if (numCharChoice ===true){
+    for (var i = 0; i < numChar.length; i++){
+      allChars.push(numChar[i]);
+      }
     //allChars.push.(numChar);
     //createPassword.push(NumChar[numRandom]);
   }
   var specCharChoice = confirm("Do you want to include special characters in your password?")
   if (specCharChoice === true){
+    for (var i = 0; i < specialChar.length; i++){
+      allChars.push(specialChar[i]);
+      }
     //allChars.push(specialChar);
    //createPassword.push(specialChar[specCharRandom]);
   }
-  //for (var = 0; i < pwLength; i++)
+  for (var i = 0; i < pwLength; i++){
+    var indexPW = Math.floor(Math.random() * allChars.length);
+    var chosenChar = allChars[indexPW];
+    password = password.concat(chosenChar);
+  }
+  console.log(password);
+  return password;
+  //for (var i = 0; i < pwLength; i++)
   //allChars.push(createPassword)
-
+  
+  //var index = Math.floor(Math.random() * options.length);
 
 } 
 //console.log(lowCaseChoice,"line 50")
