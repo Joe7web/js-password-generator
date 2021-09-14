@@ -10,5 +10,5 @@ It will be resubmitted in the future once able to be completed.
 
 
 
-I was fortunate to have some assistance from Frank Craven and Neil the learning Assistant.
+I was fortunate to have some assistance from my tutor Frank Craven, Neil the learning Assistant and Laura Cole the TA.
 
